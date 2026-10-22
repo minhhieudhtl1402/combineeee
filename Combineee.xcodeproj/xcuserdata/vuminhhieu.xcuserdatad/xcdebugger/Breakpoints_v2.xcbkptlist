@@ -14,54 +14,10 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "receive(subscriber:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BA2BAFFE-E8AD-40D0-9458-255C98E9B348 - 57845586c27d3fdc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Combineee.StringSubscription.deinit"
-                  moduleName = "Combineee.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108">
-               </Location>
-               <Location
-                  uuid = "BA2BAFFE-E8AD-40D0-9458-255C98E9B348 - 57ee8c28825f28e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Combineee.StringSubscription.__isolated_deallocating_deinit"
-                  moduleName = "Combineee.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108">
-               </Location>
-               <Location
-                  uuid = "BA2BAFFE-E8AD-40D0-9458-255C98E9B348 - 464cf086116b5239"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Combineee.StringSubscription.__deallocating_deinit"
-                  moduleName = "Combineee.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,10 +30,40 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "init(subscriber:value:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "60844832-1C46-42D5-A020-66B4EC5E96DB - b22870ff1bb785d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Combineee.StringSubscription.__allocating_init(subscriber: &#x3c4;_0_0, value: Swift.String) -&gt; Combineee.StringSubscription&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Combineee.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "231"
+                  endingLineNumber = "231">
+               </Location>
+               <Location
+                  uuid = "60844832-1C46-42D5-A020-66B4EC5E96DB - 7c22948f5920624c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Combineee.StringSubscription.init(subscriber: &#x3c4;_0_0, value: Swift.String) -&gt; Combineee.StringSubscription&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Combineee.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "227"
+                  endingLineNumber = "227">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,40 +76,10 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "request(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C17D2B9C-F99A-4930-B7A3-51E7E25649F9 - 9664b74acf8ce3f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Combineee.StringSubscription.request(Combine.Subscribers.Demand) -&gt; ()"
-                  moduleName = "Combineee.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130">
-               </Location>
-               <Location
-                  uuid = "C17D2B9C-F99A-4930-B7A3-51E7E25649F9 - 9664b74acf8ce01a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Combineee.StringSubscription.request(Combine.Subscribers.Demand) -&gt; ()"
-                  moduleName = "Combineee.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -136,8 +92,8 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "cancel()"
             landmarkType = "7">
          </BreakpointContent>
@@ -152,8 +108,8 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "receive(subscription:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,8 +124,8 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "receive(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -184,8 +140,8 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
             landmarkName = "receive(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -200,40 +156,10 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "receive(subscriber:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9ED186B8-9478-4303-AE45-96EEBFE5682A - b22870ff1bb7b53c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Combineee.StringSubscription.__allocating_init(subscriber: &#x3c4;_0_0, value: Swift.String) -&gt; Combineee.StringSubscription&lt;&#x3c4;_0_0&gt;"
-                  moduleName = "Combineee.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114">
-               </Location>
-               <Location
-                  uuid = "9ED186B8-9478-4303-AE45-96EEBFE5682A - 7c22948f592053b9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Combineee.StringSubscription.init(subscriber: &#x3c4;_0_0, value: Swift.String) -&gt; Combineee.StringSubscription&lt;&#x3c4;_0_0&gt;"
-                  moduleName = "Combineee.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vuminhhieu/Desktop/uikit/Combineee/Combineee/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -246,8 +172,8 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -262,8 +188,8 @@
             filePath = "Combineee/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -272,7 +198,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "62DA83BD-3F15-4514-BBDA-CC13FCE25A8D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Combineee/ViewController.swift"
@@ -288,7 +214,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "075670DE-FF0F-4E1B-B991-3FF752502620"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Combineee/ViewController.swift"
@@ -304,7 +230,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B3AF83CD-0309-482C-AE1C-B4B322367DC1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Combineee/ViewController.swift"

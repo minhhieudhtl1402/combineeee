@@ -15,12 +15,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        let publisher = StringPublisher(value: "Hello Combine")
-//        let subscriber = StringSubscriber()
-//
-//        publisher.subscribe(subscriber)
-//        customSubscriber()
-//        examplePassthroughSubject()
+        //        let publisher = StringPublisher(value: "Hello Combine")
+        //        let subscriber = StringSubscriber()
+        //
+        //        publisher.subscribe(subscriber)
+        //        customSubscriber()
+        //        examplePassthroughSubject()
+        //        exampleCurrentValueSubject()
+        //        exampleCollectOperator()
+        //        exampleMapOperator()
+        //        exampleFlatMapOperator()
+//        exampleOfEmpty()
+        exampleOfCompactMap()
     }
     
     
@@ -33,9 +39,9 @@ class ViewController: UIViewController {
             typealias Failure = Never
             
             func receive(subscription: any Subscription) {
-//                subscription.request(.max(3))
+                //                subscription.request(.max(3))
                 subscription.request(.unlimited)
-//                subscription.request(.none)
+                //                subscription.request(.none)
             }
             
             func receive(_ input: Int) -> Subscribers.Demand {
@@ -86,32 +92,133 @@ class ViewController: UIViewController {
         
         let subject = CurrentValueSubject<Int, Never>(0)
         
-        subject.sink { value in
-            print("current value", value)
-        }.store(in: &subscriptions)
+        subject
+            .print()
+            .sink { value in
+                print("current value", value)
+            }.store(in: &subscriptions)
+        
+        
+        let typeErasurePublisher = subject.eraseToAnyPublisher()
     }
+    
+    func exampleCollectOperator() {
+        var subscriptions = Set<AnyCancellable>()
+        let subject =  CurrentValueSubject<Int, Never>(0)
+        
+        subject
+            .print()
+            .collect(3)
+            .sink { value in
+                print("current value", value)
+            }.store(in: &subscriptions)
+        subject.send(1)
+        subject.send(2)
+        subject.send(3)
+        subject.send(4)
+        subject.send(5)
+        subject.send(6)
+        subject.send(7)
+        subject.send(completion: .finished)
+    }
+    
+    func exampleMapOperator() {
+        var subscriptions = Set<AnyCancellable>()
+        let subject = CurrentValueSubject<Person, Never>(.init(name: "vmhieu", age: 25, salary: 10000))
+        
+        subject
+            .print()
+        //            .map(\.name)
+            .map(\.name, \.salary)
+            .sink { value in
+                print("current value", value)
+            }.store(in: &subscriptions)
+        subject.send(.init(name: "vmhieu", age: 25, salary: 12000))
+        subject.send(.init(name: "vmhieu12", age: 26, salary: 130000))
+        subject.send(.init(name: "vmhi32eu", age: 27, salary: 14000))
+        subject.send(.init(name: "vmhi4565eu", age: 28, salary: 15000))
+        subject.send(.init(name: "v67mhieu", age: 29, salary: 16000))
+        subject.send(.init(name: "vmhi779eu", age: 30, salary: 18000))
+        subject.send(.init(name: "vmh90ieu", age: 31, salary: 10800))
+        subject.send(completion: .finished)
+    }
+    
+    func exampleFlatMapOperator() {
+        struct FuncChatter {
+            let name: String
+            let chatter: CurrentValueSubject<String, Never>
+        }
+        var subscriptions = Set<AnyCancellable>()
+        
+        let hieuChatter = FuncChatter(name: "hieu", chatter: CurrentValueSubject<String, Never>(.init("Hieu start")))
+        let pLinhChatter = FuncChatter(name: "PLinh", chatter: CurrentValueSubject<String, Never>(.init("PLinh start")))
+        
+        let chatterSubject = CurrentValueSubject<FuncChatter, Never>(hieuChatter)
+        chatterSubject.flatMap(maxPublishers: .max(2)) { funcChatter in
+            funcChatter.chatter
+        }.sink { message in
+            print("message",message)
+        }.store(in: &subscriptions)
+        chatterSubject.send(pLinhChatter)
+        hieuChatter.chatter.send("Hello im hieu")
+        pLinhChatter.chatter.send("Hello Hieu,im PLinh")
+        hieuChatter.chatter.send("how are you PLinh?")
+        pLinhChatter.chatter.send("im fine")
+    }
+    
+    func exampleOfEmpty() {
+        
+        var subscriptions = Set<AnyCancellable>()
+        let empty = Empty<Int, Never>()
+        // 2
+        empty
+            .replaceEmpty(with: 36)
+            .sink(receiveCompletion: { print($0) },
+                  receiveValue: { print($0) })
+            .store(in: &subscriptions)
+    }
+    
+    func exampleOfCompactMap() {
+        var subscriptions = Set<AnyCancellable>()
+        let strings = ["a", "1.24", "3", "def", "45", "0.23"].publisher
+        
+        // 2
+        strings
+            .compactMap { Float($0) }
+            .sink(receiveValue: {
+                // 3
+                print($0)
+            })
+            .store(in: &subscriptions)
+    }
+}
+
+struct Person {
+    let name: String
+    let age: Int
+    let salary: Double
 }
 
 struct StringPublisher: Publisher {
     typealias Output = String
     typealias Failure = Never
-
+    
     let value: String
-
+    
     func receive<S>(subscriber: S)
     where S: Subscriber,
           S.Input == String,
           S.Failure == Never {
-
-        print("Publisher: /*nhận*/ được yêu cầu subscribe")
-
-        let subscription = StringSubscription(
-            subscriber: subscriber,
-            value: value
-        )
-
-        subscriber.receive(subscription: subscription)
-    }
+              
+              print("Publisher: /*nhận*/ được yêu cầu subscribe")
+              
+              let subscription = StringSubscription(
+                subscriber: subscriber,
+                value: value
+              )
+              
+              subscriber.receive(subscription: subscription)
+          }
 }
 
 
@@ -140,32 +247,32 @@ where S.Input == String, S.Failure == Never {
     }
     
     func cancel() {
-            subscriber = nil
-            isCompleted = true
-            print("Subscription: cancelled")
-        }
+        subscriber = nil
+        isCompleted = true
+        print("Subscription: cancelled")
+    }
 }
 
 
 struct StringSubscriber: Subscriber {
     typealias Input = String
     typealias Failure = Never
-
+    
     // Thêm phần này
     var combineIdentifier: CombineIdentifier {
         CombineIdentifier()
     }
-
+    
     func receive(subscription: Subscription) {
         print("Subscriber: nhận Subscription")
         subscription.request(.unlimited)
     }
-
+    
     func receive(_ input: String) -> Subscribers.Demand {
         print("Subscriber: nhận value =", input)
         return .none
     }
-
+    
     func receive(completion: Subscribers.Completion<Never>) {
         print("Subscriber: nhận completion =", completion)
     }
